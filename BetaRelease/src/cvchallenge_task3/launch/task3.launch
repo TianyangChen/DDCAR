@@ -1,0 +1,18 @@
+<launch>
+<!--
+<node name="task3_stopper" pkg="stopafterdistance" type="stopafterdistance_node"/>
+<node name="default_controller" pkg="catvehicle_hoffmannfollower" type="catvehicle_hoffmannfollower_node">
+	<remap from="/catvehicle/cmd_vel" to="/catvehicle/cmd_vel_task4"/>
+</node>
+-->
+
+	<node name="easy_run" pkg="cvchallenge_task3" type="easy_run.py" />
+	<node name="stop_status" pkg="cvchallenge_task3" type="stop_status.py" />
+	<node name="draw_img" pkg="cvchallenge_task3" type="draw_img.py" output="screen"/>	
+
+
+
+
+<!-- TODO: make modifications in this launch file to start up your other nodes, and to listen to /catvehicle/vel, with the objective of sending out your Gazebo world model if the /catvehicle/vel is 0 for more than 5 seconds -->
+
+</launch>

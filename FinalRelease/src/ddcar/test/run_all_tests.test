@@ -1,0 +1,47 @@
+<launch>
+
+    <!--
+        This test file will run all five tests.
+        It uses "world6.world" as the simulated world, you can change this in line 14.
+        If you change the default simulated world, don't forget to change other expected parameters.
+        You can set the expected barrier number in line 17.
+        You can set the expected objects in line 19.
+        If your simulated world file has different house models, such as house_1, house_2 and house_3, please set them all to be house_3 in "expected_objects", because this project can't distinguish different houses.
+        Don't worry about the order you typed in "expected_objects", we will sort them for you.
+    -->
+
+  	<include file="$(find ddcar)/launch/catvehicle_custom.launch">
+    	<arg name="worldfile" value="world6.world"/>
+  	</include> 
+
+    <param name="expected_barrier_num" type="int" value="6" />
+
+    <param name="expected_objects" value="[
+    {'type': 'house_3', 'x': 17.0, 'y': -8.0}, 
+    {'type': 'house_3', 'x': 18.0, 'y': 7.0}, 
+    {'type': 'house_3', 'x': 4.55, 'y': 8.55}, 
+    {'type': 'jersey_barrier', 'x': 27.0, 'y': 12.0}, 
+    {'type': 'jersey_barrier', 'x': 27.0, 'y': 2.0}, 
+    {'type': 'jersey_barrier', 'x': 27.0, 'y': 17.83}, 
+    ]" />
+
+    <node name="easy_run" pkg="ddcar" type="easy_run.py" /> 
+    <node name="uCanDoIt" pkg="ucandoit" type="ucandoit_node" />
+    <node name="draw_img" pkg="ddcar" type="draw_img.py" output="screen"/>	
+
+    <!-- This test is for requirement B: DDCAR can automatically stop in the end. -->
+    <test test-name="test_vehicle_stop" pkg="ddcar" type="test_vehicle_stop.py"  /> 
+
+    <!-- This test is for requirement B: DDCAR can avoid all the barriers automatically while running. -->
+    <test test-name="test_safty" pkg="ddcar" type="test_safty.py"  /> 
+
+    <!-- This test is for requirement B: DDCAR can detect the number of the objects in the visual field of the vehicle as expected. -->
+    <test test-name="test_barrier_cnt" pkg="ddcar" type="barrier_cnt.py"  /> 
+
+    <!-- This test is for requirement A: DDCAR can recognize the type of the objects. These types in our project are House, Jersey barrier and Construction cone. -->
+    <test test-name="test_object_type" pkg="ddcar" type="test_object_type.py"  /> 
+
+    <!-- This test is for requirement A: DDCAR can detect the position of the objects in its visual field as the real world. -->
+    <test test-name="test_object_pose" pkg="ddcar" type="test_object_pose.py"  /> 
+
+</launch>

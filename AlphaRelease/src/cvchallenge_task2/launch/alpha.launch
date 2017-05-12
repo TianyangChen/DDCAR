@@ -1,0 +1,11 @@
+<!-- in cvchallenge_task2/launch/task2.launch -->
+<launch>
+	<node name="task2" pkg="cvchallenge_task2" type="task2.py" />
+
+	<node name="easy_run" pkg="cvchallenge_task2" type="easy_run.py" />
+<!--
+	<node pkg="rosbag" type="record" name="record" args="-o /home/ece446/bagfiles/record.bag /catvehicle/odom /catvehicle/cmd_vel /catvehicle/front_left_steering_position_controller/command /catvehicle/front_right_steering_position_controller/command" />
+-->
+
+
+</launch>

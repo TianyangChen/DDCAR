@@ -1,0 +1,13 @@
+<launch>
+  	<include file="$(find cvchallenge_task3)/launch/catvehicle_custom.launch">
+    	<arg name="worldfile" value="world1.world"/>
+  	</include>
+  	  <include file="$(find cvchallenge_task3)/launch/task3.launch">
+
+  	</include>
+
+	
+	<!-- <test test-name="all_tests" pkg="cvchallenge_task3" type="all_tests.py"  />
+	<test test-name="test_safty" pkg="cvchallenge_task3" type="test_safty.py"  />  -->
+	<test test-name="test_barrier_cnt" pkg="cvchallenge_task3" type="barrier_cnt.py"  />
+</launch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+<world name="default">
+<include>
+<uri>model://ground_plane</uri>
+</include>
+<include>
+<uri>model://sun</uri>
+</include>
+<include>
+<uri>model://house_3</uri>
+<pose>6.3 4.95 0.0 0.0 0.0 0.0</pose>
+</include>
+<include>
+<uri>model://house_3</uri>
+<pose>16.75 -7.75 0.0 0.0 0.0 0.0</pose>
+</include>
+<include>
+<uri>model://house_3</uri>
+<pose>17.5 6.95 0.0 0.0 0.0 0.0</pose>
+</include>
+<include>
+<uri>model://jersey_barrier</uri>
+<pose>26.8 2.25 0.0 0.0 0.0 1.57</pose>
+</include>
+</world>
+</sdf>

@@ -1,0 +1,4 @@
+<!-- in cvchallenge_task2/launch/task2.launch -->
+<launch>
+	<node name="task2" pkg="cvchallenge_task2" type="task2.py" />
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+
+	<!-- This is the final release launch file -->
+	 
+	<node name="easy_run" pkg="ddcar" type="easy_run.py" /> 
+	<node name="uCanDoIt" pkg="ucandoit" type="ucandoit_node" />
+	<node name="draw_img" pkg="ddcar" type="draw_img.py" output="screen"/>	
+
+</launch>
