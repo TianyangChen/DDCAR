@@ -8,7 +8,7 @@ easyrun node:
 
 The list of requirements has finished : 1,5,4
 
-$ git clone git@git.engr.arizona.edu:ece473-573-2017S/ddcar.git
+$ git clone https://github.com/TianyangChen/DDCAR.git
 $ cd ddcar/AlphaRelease/src/
 $ git clone https://github.com/sprinkjm/catvehicle.git
 $ git clone https://github.com/sprinkjm/obstaclestopper.git

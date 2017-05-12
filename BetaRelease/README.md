@@ -5,7 +5,7 @@ Tianyang Chen, Yawei Ding, Yuanzhengyu Li
 
 Open a terminal, type the following command line:
 
-	$ git clone git@git.engr.arizona.edu:ece473-573-2017S/ddcar.git
+	$ git clone https://github.com/TianyangChen/DDCAR.git
 	$ cd ddcar/BetaRelease/src/
 	$ git clone https://github.com/sprinkjm/catvehicle.git
 	$ git clone https://github.com/sprinkjm/obstaclestopper.git
